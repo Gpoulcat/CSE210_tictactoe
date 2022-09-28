@@ -163,8 +163,11 @@
         for(int i = 0; i < board.Count(); i++)
         {
         board[i] = board[i].Replace(Convert.ToString(choice), "x");
-
-        
+        }
+        if (currentPlayer == "o")
+        for(int i = 0; i < board.Count(); i++)
+        {
+        board[i] = board[i].Replace(Convert.ToString(choice), "o");
         }
     }
 }
