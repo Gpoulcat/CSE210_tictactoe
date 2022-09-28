@@ -115,7 +115,7 @@
     /// <returns>True if the board is full.</returns>
     static bool IsTie(List<string> board)
     {
-        if (board[0] == "1" && board[1] == "2" && board[2] == "3" && board[3] == "4" && board[4] == "5" && board[5] == "6" && board[6] == "7" && board[7] == "8" && board[8] == "9")
+        if (board[0] != "1" && board[1] != "2" && board[2] != "3" && board[3] != "4" && board[4] != "5" && board[5] != "6" && board[6] != "7" && board[7] != "8" && board[8] != "9")
         {
             return true;
         }
@@ -162,7 +162,9 @@
         if (currentPlayer == "x")
         for(int i = 0; i < board.Count(); i++)
         {
-        board[i] = board[i].Replace(choice - 1, "x");
+        board[i] = board[i].Replace(Convert.ToString(choice), "x");
+
+        
         }
     }
 }
