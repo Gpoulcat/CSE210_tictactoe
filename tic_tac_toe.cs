@@ -143,6 +143,8 @@
     static int GetMoveChoice(string currentPlayer)
     {
         int choice = 0;
+        Console.WriteLine($"{currentPlayer} it is your turn");
+
         Console.Write("What is your move?: ");
         choice = Convert.ToInt32(Console.ReadLine());
         
